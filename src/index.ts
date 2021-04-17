@@ -1,7 +1,7 @@
 import { LOG_COLORS, LOG_TYPE_LOG, LOG_TYPE_SUCCESS, LOG_TYPE_ERROR, LOG_TYPE_WARNING } from './constants';
 
 export interface IConsoleInitOptions {
-  env: 'production' | 'development';
+  env: string
 }
 
 const consoleLog = global.console.log;
@@ -27,7 +27,8 @@ function ymoLog(logType: string, ...args) {
 
 const Console = {
   init: function(options: IConsoleInitOptions) {
-    if (options.env === 'development') {
+    const { env } = options;
+    if (env === 'development' || env === 'debug') {
       global.console.log = function(...args) {
         ymoLog(LOG_TYPE_LOG, ...args);
       }

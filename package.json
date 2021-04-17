@@ -1,14 +1,16 @@
 {
   "name": "@ymo/console",
-  "version": "1.0.4",
-  "description": "",
+  "version": "1.0.5",
+  "description": "color console",
   "main": "lib/index.js",
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc"
   },
   "keywords": [
-    "ymo-script"
+    "ymo",
+    "ymo-utils",
+    "ymo-console"
   ],
   "author": "walljs@163.com",
   "license": "ISC",

@@ -1,4 +1,4 @@
-import { LOG_COLORS, LOG_TYPE_LOG, LOG_TYPE_SUCCESS, LOG_TYPE_ERROR, LOG_TYPE_WARNING } from './constants';
+import { LOG_COLORS, LOG_TYPE_LOG, LOG_TYPE_ERROR, LOG_TYPE_WARNING } from './constants';
 
 export interface IConsoleInitOptions {
   env: string
@@ -37,9 +37,6 @@ const Console = {
       }
       global.console.error = function(...args) {
         ymoLog(LOG_TYPE_ERROR, ...args);
-      }
-      global.console.info = function(...args) {
-        ymoLog(LOG_TYPE_SUCCESS, ...args);
       }
     }
   }
